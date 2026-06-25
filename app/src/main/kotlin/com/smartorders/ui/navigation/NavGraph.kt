@@ -8,54 +8,33 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.smartorders.ui.screens.home.HomeScreen
+import com.smartorders.ui.screens.dashboard.DashboardScreen
 import com.smartorders.ui.screens.login.LoginScreen
-import com.smartorders.ui.screens.settings.SettingsScreen
-import com.smartorders.ui.screens.statistics.StatisticsScreen
 
 sealed class Screen(val route: String) {
-    object Login : Screen("login")
-    object Home : Screen("home")
-    object Statistics : Screen("statistics")
-    object Settings : Screen("settings")
+    object Login     : Screen("login")
+    object Dashboard : Screen("dashboard")
 }
 
 @Composable
 fun SmartOrdersNavGraph(
-    navController: NavHostController = rememberNavController(),
-    startDestination: String = Screen.Login.route
+    navController: NavHostController = rememberNavController()
 ) {
     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-        NavHost(
-            navController = navController,
-            startDestination = startDestination
-        ) {
+        NavHost(navController = navController, startDestination = Screen.Login.route) {
+
             composable(Screen.Login.route) {
                 LoginScreen(
                     onLoginSuccess = {
-                        navController.navigate(Screen.Home.route) {
+                        navController.navigate(Screen.Dashboard.route) {
                             popUpTo(Screen.Login.route) { inclusive = true }
                         }
                     }
                 )
             }
 
-            composable(Screen.Home.route) {
-                HomeScreen(
-                    onNavigateToStatistics = { navController.navigate(Screen.Statistics.route) },
-                    onNavigateToSettings = { navController.navigate(Screen.Settings.route) }
-                )
-            }
-
-            composable(Screen.Statistics.route) {
-                StatisticsScreen(
-                    onNavigateBack = { navController.popBackStack() }
-                )
-            }
-
-            composable(Screen.Settings.route) {
-                SettingsScreen(
-                    onNavigateBack = { navController.popBackStack() },
+            composable(Screen.Dashboard.route) {
+                DashboardScreen(
                     onLogout = {
                         navController.navigate(Screen.Login.route) {
                             popUpTo(0) { inclusive = true }

@@ -3,8 +3,7 @@ package com.smartorders.di
 import android.content.Context
 import androidx.room.Room
 import com.smartorders.data.database.AppDatabase
-import com.smartorders.data.database.dao.OrderDao
-import com.smartorders.data.database.dao.StatisticsDao
+import com.smartorders.data.database.dao.TripLogDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,11 +22,10 @@ object DatabaseModule {
             context,
             AppDatabase::class.java,
             AppDatabase.DATABASE_NAME
-        ).build()
+        )
+        .fallbackToDestructiveMigration()
+        .build()
 
     @Provides
-    fun provideOrderDao(db: AppDatabase): OrderDao = db.orderDao()
-
-    @Provides
-    fun provideStatisticsDao(db: AppDatabase): StatisticsDao = db.statisticsDao()
+    fun provideTripLogDao(db: AppDatabase): TripLogDao = db.tripLogDao()
 }
