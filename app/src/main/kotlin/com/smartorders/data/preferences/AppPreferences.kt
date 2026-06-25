@@ -43,7 +43,7 @@ class AppPreferences @Inject constructor(
     val maxTripPrice:      Flow<Double>   = dataStore.data.map { it[MAX_TRIP_PRICE]       ?: 9999.0}
     val maxPickupDistance: Flow<Double>   = dataStore.data.map { it[MAX_PICKUP_DISTANCE]  ?: 5.0   }
     val maxTripDistance:   Flow<Double>   = dataStore.data.map { it[MAX_TRIP_DISTANCE]    ?: 50.0  }
-    val targetApp:         Flow<TargetApp>= dataStore.data.map {
+    val targetApp:         Flow<TargetApp> = dataStore.data.map {
         TargetApp.valueOf(it[TARGET_APP] ?: TargetApp.ALL.name)
     }
 
