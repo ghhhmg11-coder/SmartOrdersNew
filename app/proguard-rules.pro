@@ -1,0 +1,2 @@
+-keep class com.smartorders.** { *; }
+-keepclassmembers class * extends androidx.room.RoomDatabase { *; }

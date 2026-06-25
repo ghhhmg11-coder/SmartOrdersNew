@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Orders</string>
+    <string name="accessibility_service_label">Smart Orders Accessibility Service</string>
+    <string name="accessibility_service_description">Smart Orders uses this service to monitor and capture order events automatically from delivery apps.</string>
+
+    <!-- Login -->
+    <string name="login_title">تسجيل الدخول</string>
+    <string name="login_username">اسم المستخدم</string>
+    <string name="login_password">كلمة المرور</string>
+    <string name="login_button">دخول</string>
+    <string name="login_error">اسم المستخدم أو كلمة المرور غير صحيحة</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_statistics">الإحصائيات</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <!-- Home -->
+    <string name="home_title">الطلبات</string>
+    <string name="home_no_orders">لا توجد طلبات بعد</string>
+    <string name="home_new_order">طلب جديد</string>
+    <string name="home_total_today">مجموع اليوم</string>
+    <string name="home_active_orders">طلبات نشطة</string>
+    <string name="order_status_pending">قيد الانتظار</string>
+    <string name="order_status_accepted">مقبول</string>
+    <string name="order_status_preparing">جاري التحضير</string>
+    <string name="order_status_delivered">تم التوصيل</string>
+    <string name="order_status_cancelled">ملغي</string>
+    <string name="order_id">رقم الطلب</string>
+    <string name="order_amount">المبلغ</string>
+    <string name="order_customer">العميل</string>
+    <string name="order_time">الوقت</string>
+
+    <!-- Statistics -->
+    <string name="stats_title">الإحصائيات اليومية</string>
+    <string name="stats_total_orders">إجمالي الطلبات</string>
+    <string name="stats_total_revenue">إجمالي الإيرادات</string>
+    <string name="stats_completed">الطلبات المكتملة</string>
+    <string name="stats_cancelled">الطلبات الملغاة</string>
+    <string name="stats_avg_order">متوسط قيمة الطلب</string>
+    <string name="stats_today">اليوم</string>
+    <string name="stats_week">هذا الأسبوع</string>
+    <string name="stats_month">هذا الشهر</string>
+
+    <!-- Settings -->
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_accessibility">إعداد خدمة إمكانية الوصول</string>
+    <string name="settings_accessibility_desc">تفعيل الخدمة لاكتشاف الطلبات تلقائياً</string>
+    <string name="settings_accessibility_enabled">الخدمة مفعّلة</string>
+    <string name="settings_accessibility_disabled">الخدمة غير مفعّلة</string>
+    <string name="settings_enable_accessibility">تفعيل الخدمة</string>
+    <string name="settings_notifications">الإشعارات</string>
+    <string name="settings_notifications_desc">إشعارات الطلبات الجديدة</string>
+    <string name="settings_sound">الصوت</string>
+    <string name="settings_sound_desc">تشغيل صوت عند وصول طلب جديد</string>
+    <string name="settings_auto_accept">القبول التلقائي</string>
+    <string name="settings_auto_accept_desc">قبول الطلبات تلقائياً</string>
+    <string name="settings_logout">تسجيل الخروج</string>
+    <string name="settings_version">الإصدار</string>
+    <string name="settings_app_info">معلومات التطبيق</string>
+    <string name="currency">ر.س</string>
+    <string name="confirm_logout">هل أنت متأكد من تسجيل الخروج؟</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+</resources>
